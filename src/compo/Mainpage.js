@@ -52,10 +52,10 @@ const Mainpage = ({user,onLogout}) => {
             </div>
            <div className='mainpage'>
             <p className='mm'>
-                <p><Luck/></p>
-            <Quote/>
+                
             
-            <Weather/>
+            <p><Luck/></p>
+            <Quote/><Weather/>
             </p>
            <p className='todoset'>
             

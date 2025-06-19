@@ -3,7 +3,7 @@ import DateFrom from './DateForm';
 
 const TodoList = ({todos,onDelete,ontoggle}) => {
     if(todos.length===0){
-        return <p>할 일이 없습니다</p>;
+        return <p className='nodo'>할 일이 없습니다</p>;
     }
     return (
              <ul className='list'>
