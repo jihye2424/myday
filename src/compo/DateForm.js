@@ -12,7 +12,7 @@ const DateFrom = () => {
     return closeEffect;
   },[]);
   return (
-    <div className="date">
+    <div >
       {/* {day.toLocaleDateString('en-US')} */}
       {day.toLocaleDateString('ko-KR')}
       {/* {time.toLocaleTimeString('ko-KR',{

@@ -33,16 +33,23 @@ const Weather = () => {
         console.log(weather);
     },[]);
     return (
-        <div className='weather'>
+        <div >
     {
         weather && (
         <div className='weather'>
-        <h3>🌍{weather.name}</h3>
+        <h2>오늘의 날씨 </h2>
+        <div className='wt'>
+        <h3><img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}></img>
+             <p>{weather.weather[0].description}</p></h3>
             <p className='temp'>
-            <h3>{(weather.main.temp)} ℃</h3>
-            <h3>{weather.weather[0].description}</h3>
-            <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}></img>
+            <h3>🌍 {weather.name}</h3>
+            <h3>🌡️{Math.floor(weather.main.temp)} ℃</h3>
+            
             </p>
+            </div>
+            
+            
+            
             </div>
         )
     }

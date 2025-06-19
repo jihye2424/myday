@@ -14,11 +14,12 @@ const TodoForm = ({onAdd}) => {
     }
     return (
         <form className='todoform' onSubmit={handleSubmit} >
+            <h2>To do list</h2>
             <input 
             value={task}
             onChange={(e)=>{setTask(e.target.value);}}
             placeholder='할 일을 입력하세요.'/>
-            <button type='submit'>추가</button>
+            <button type='submit'>➕</button>
         </form>
     );
 };

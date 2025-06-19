@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import Quote from './Quote';
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
+import Weather from './Weather';
+import Luck from './Luck';
 
 const Mainpage = ({user,onLogout}) => {
     const TODO_KEY="todos";
@@ -43,12 +45,25 @@ const Mainpage = ({user,onLogout}) => {
     setTodos(update);
    }
     return (
-        <div>
-            <h2>{user}님 반가워요 🖐🏻</h2>
-            <button onClick={onLogout}>로그아웃</button>
+        <div className='main'>
+        <div className='mainID'>
+            <h2> Welcome,  {user}!🖐🏻      <button onClick={onLogout}>나가기</button>
+            </h2>
+            </div>
+           <div className='mainpage'>
+            <p className='mm'>
+                <p><Luck/></p>
             <Quote/>
+            
+            <Weather/>
+            </p>
+           <p className='todoset'>
+            
             <TodoForm onAdd={addTodo}/>
             <TodoList todos={todos} onDelete={deleteTodo} ontoggle={toggleTodo}/>
+             </p>
+             
+        </div>
         </div>
     );
 };

@@ -3,7 +3,7 @@ import "./App.scss"
 import LoginForm from "./compo/LoginForm";
 import Time from "./compo/Time";
 import Mainpage from "./compo/Mainpage";
-import Weather from "./compo/Weather";
+// import Weather from "./compo/Weather";
 import DateFrom from "./compo/DateForm";
 import Dark from "./compo/Dark";
 
@@ -34,14 +34,13 @@ const App = () => {
       <img src={`${process.env.PUBLIC_URL}/Images/contact.jpg`} alt="이미지1"/> */}
       
       <div className="up">
-        <Dark/>
-      <DateFrom/>
-      
+      <Dark/><Time/>
+      <p className="date"><DateFrom/></p>
       </div>
-      <Weather/>
-     <Time/>
-     {user ? (<Mainpage user={user} onLogout={handleLogout}/>):(<LoginForm onLogin={handleLogin}/>)}
-  
+      
+      {user ? (<Mainpage user={user} onLogout={handleLogout}/>):(<LoginForm onLogin={handleLogin}/>)}
+      
+    
     </div>
   );
 };

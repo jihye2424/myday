@@ -17,7 +17,7 @@ const Dark = () => {
         <div>
             <button className='darkbutton' onClick={()=>{setDark(!dark)}}>
                 {
-                    dark ? "라이트모드":"다크모드"
+                    dark ? "라이트모드☀️":"다크모드🌙"
                 }</button>
                 
         </div>
